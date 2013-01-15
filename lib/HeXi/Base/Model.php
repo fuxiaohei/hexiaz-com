@@ -1,109 +1,61 @@
 <?php
+
 /**
- * Created by JetBrains PhpStorm.
- * User: FuXiaoHei
- * Date: 13-1-8
- * Time: 下午9:54
- * To change this template use File | Settings | File Templates.
+ * Model抽象类
  */
-abstract class BaseModel extends BaseClass {
+abstract class baseModel {
 
     /**
-     * @var AbstractDriver|PdoDriver
+     * 数据加载状态
+     * @var bool
      */
-    protected $db;
+    private $_DbStatus = false;
 
-    protected $table;
+    /**
+     * SQL类加载状态
+     * @var bool
+     */
+    private $_SqlStatus = false;
 
-    protected $primary;
-
-    protected $columns;
-
-    public function __construct() {
-        parent::__construct();
-        $this->init();
-        $this->activeData = array();
-        $this->columns    = '*';
+    /**
+     * 调用数据库
+     */
+    private function enableDatabase() {
+        HeXi::import('HeXi.Database.Db');
+        $this->_DbStatus = true;
     }
 
-    protected $activeData;
-
-    abstract protected function init();
-
-    public function __set($key, $value) {
-        $this->activeData[$key] = $value;
-        return $this;
+    /**
+     * 调用SQL类
+     */
+    private function enableSqlBuilder() {
+        HeXi::import('HeXi.Database.Sql');
+        $this->_SqlStatus = true;
     }
 
+    /**
+     * 获取SQL类
+     * @param string $table
+     * @param string $column
+     * @return Sql
+     */
     protected function sql($table, $column = '*') {
+        if (!$this->_SqlStatus) {
+            $this->enableSqlBuilder();
+        }
         return Sql::table($table, $column);
     }
 
-    protected function save($keys = null) {
-        if (!$this->db) {
-            exit('No Database Connection in Model');
+    /**
+     * 获取数据库对象
+     * @param string $name
+     * @return AbstractDriver|PdoDriver
+     */
+    protected function useDb($name = 'default') {
+        if (!$this->_DbStatus) {
+            $this->enableDatabase();
         }
-        $keys   = is_null($keys) ? array() : (is_string($keys) ? explode(',', $keys) : $keys);
-        $column = array_diff(array_keys($this->activeData), $keys);
-        $sql    = $this->sql($this->table, join(',', $column));
-        if ($keys) {
-            foreach ($keys as $k) {
-                $sql->where($k . ' = :' . $k);
-            }
-            $sql = $sql->update();
-        } else {
-            $sql = $sql->insert();
-        }
-        $data             = $this->activeData;
-        $this->activeData = array();
-        return $this->db->exec($sql, $data);
-    }
-
-    protected function find($key) {
-        $column        = $this->columns;
-        $this->columns = '*';
-        $sql           = $this->sql($this->table, $column)
-            ->where($this->primary . ' = :' . $this->primary)
-            ->select();
-        return $this->db->query($sql, array($this->primary => $key));
-    }
-
-    protected function findAll($condition) {
-        $condition = is_string($condition) ? array($condition) : $condition;
-        $sql       = $this->sql($this->table, $this->columns);
-        if ($condition['order']) {
-            $sql->order($condition['order']);
-        }
-        if ($condition['limit']) {
-            $sql->limit($condition['limit']);
-        }
-        if ($condition['pager']) {
-            $sql->pager($condition['pager'][0], $condition['pager'][1]);
-        }
-        $where = isset($condition['where']) ? $condition['where'] : $condition;
-        foreach ($where as $w) {
-            $sql->where($w);
-        }
-        $sql              = $sql->select();
-        $data             = $this->db->queryAll($sql, $this->activeData);
-        $this->columns    = '*';
-        $this->activeData = array();
-        return $data;
-    }
-
-    public function delete($key = null) {
-        $sql   = $this->sql($this->table);
-        $where = array();
-        if ($key) {
-            $sql->where($this->primary . ' = :' . $this->primary);
-            $where[$this->primary] = $key;
-        }
-        foreach ($this->activeData as $name => $value) {
-            $sql->where($name . ' = :' . $name);
-            $where[$name] = $value;
-        }
-        $this->activeData = array();
-        return $this->db->exec($sql->delete(), $where);
+        return Db::connect($name);
     }
 
 }

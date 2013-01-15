@@ -1,11 +1,11 @@
 <?php
 
-error_reporting(E_ALL ^ E_NOTICE);
+error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
 
-define('DS', DIRECTORY_SEPARATOR);
-define('NOW', time());
+define('NOW',time());
 
-require_once 'lib/HeXi/HeXi.php';
+require 'lib/HeXi/HeXi.php';
 
-HeXi::create('Blog', __DIR__ .DS.'blog'.DS)
-    ->run();
+HeXi::setup('Blog',__DIR__.'/blog/');
+
+HeXi::run();

@@ -1,78 +1,112 @@
 <?php
+define('HEXI_PATH', __DIR__ . '/');
 
-define('HEXI_PATH', __DIR__ . DS);
-
-require_once 'common.php';
-
-import('HeXi.Core.Error', true);
-
-import('HeXi.Core.Router', true);
+require_once 'Core/Exception.php';
 
 class HeXi {
 
-    private static $apps = array();
+    public static $name;
 
-    /**
-     * @param string $name
-     * @param string $dir
-     * @return HeXi
-     */
-    public static function create($name, $dir) {
-        self::$apps[$name] = new HeXi($name, $dir);
-        return self::$apps[$name];
-    }
+    public static $path;
 
-    public static function get($name) {
-        return isset(self::$apps[$name]) ? self::$apps[$name] : false;
-    }
+    public static $config = array();
 
-    //------------------------------------
+    public static $param = array();
 
+    //---------------- init 过程 --------------
 
-    //------------------------------------
-
-    public function __construct($name, $dir) {
-        if (!is_dir($dir)) {
-            Error::stop('Application Directory Exception :' . $dir, 'APP');
+    private static function init() {
+        ob_start();
+        self::setExceptionHandler();
+        if (self::loadConfigFile('app') === false) {
+            self::exception('Application Configuration File is lost');
         }
-        define('APP_NAME', $name);
-        define('APP_PATH', $dir);
-        $this->prepare();
+        self::regAutoLoader();
     }
 
-    private $isRunning = false;
+    private static function setExceptionHandler() {
+        set_exception_handler(function (Exception $exc) {
+            //ob_end_clean();
+            echo $exc->getMessage();
+            exit;
+        });
+    }
 
-    private $response;
-
-    private function prepare() {
-        config('app');
-        spl_autoload_register(function ($class) {
-            $cmd = $GLOBALS['config']['app']['class'][$class];
-            if (!$cmd) {
-                Error::stop('Auto Loader Exception : ' . $class, 'APP');
+    private static function regAutoLoader() {
+        spl_autoload_register(function ($className) {
+            if (class_exists($className, false) || interface_exists($className, false)) {
+                return true;
             }
-            import($cmd, true);
+            $class = array(
+                'HeXi.Core.' . $className,
+                HeXi::$name . '.Lib.ORG.' . $className
+            );
+            foreach ($class as $c) {
+                if (self::import($c)) {
+                    return true;
+                }
+            }
+            self::exception('Application AutoLoader Error: ' . $className);
+            return false;
         });
     }
 
 
-    private function sendResponse() {
-        if ($this->response === true) {
-            Response::instance()->send();
-            exit;
+    //----------------------------------
+
+    public static function setup($name, $path) {
+        if (!is_dir($path)) {
+            self::exception('Application Directory Error: ' . $path);
         }
-        if (is_string($this->response)) {
-            Response::instance()
-                ->content($this->response)
-                ->send();
-            exit;
-        }
+        self::$path = $path;
+        self::$name = $name;
+        self::init();
     }
 
-    public function run() {
-        $this->response  = Router::instance()->dispatch();
-        $this->isRunning = true;
-        $this->sendResponse();
+    public static function run() {
+        Router::auto();
+        Response::send();
     }
 
+    //-------------------
+
+    public static $inc = array();
+
+    public static function import($c) {
+        if (self::$inc[$c]) {
+            return true;
+        }
+        $file = null;
+        if (stripos($c, 'HeXi.') === 0) {
+            $file = str_replace(array('HeXi.', '.'), array(HEXI_PATH, '/'), $c) . '.php';
+        }
+        if (stripos($c, self::$name . '.') === 0) {
+            $file = str_replace(array(self::$name . '.', '.'), array(self::$path, '/'), $c) . '.php';
+        }
+        if (stripos($c, 'Extend.') === 0) {
+            $file = str_replace(array('Extend.', '.'), array(dirname(HEXI_PATH) . '/Extend/', '/'), $c) . '.php';
+        }
+        if (is_file($file)) {
+            require_once $file;
+            self::$inc[$c] = $file;
+            return true;
+        }
+        return false;
+    }
+
+    public static function loadConfigFile($configFilename, $overwrite = false) {
+        if (self::$config[$configFilename] && !$overwrite) {
+            return self::$config[$configFilename];
+        }
+        $file = self::$path . 'conf/' . $configFilename . '.php';
+        if (!is_file($file)) {
+            return false;
+        }
+        self::$config[$configFilename] = require($file);
+        return self::$config[$configFilename];
+    }
+
+    public static function exception($message, $type = 'APP') {
+        throw new HeXiException($message, $type);
+    }
 }
