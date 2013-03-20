@@ -79,19 +79,20 @@ textarea.ipt:focus {
   margin-left: 18px;
 }
 #sub-nav a:hover {
-  opacity: .8;
+  opacity: .7;
+  background-position: 0 -24px !important;
 }
 #sub-nav a.sina {
-  background: url('../img/icon_weibo.png') center center no-repeat;
+  background: url('../img/icon_weibo.png') 0 0 no-repeat;
 }
 #sub-nav a.osc {
-  background: url('../img/icon_osc.png') center center no-repeat;
+  background: url('../img/icon_osc.png') 0 0 no-repeat;
 }
 #sub-nav a.git {
-  background: url('../img/icon_git.png') center center no-repeat;
+  background: url('../img/icon_git.png') 0 0 no-repeat;
 }
 #sub-nav a.feed {
-  background: url('../img/icon_feed.png') center center no-repeat;
+  background: url('../img/icon_feed.png') 0 0 no-repeat;
 }
 /* --- main layout style --- */
 #main {
