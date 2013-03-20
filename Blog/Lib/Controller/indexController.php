@@ -138,7 +138,7 @@ class indexController extends Controller {
     //-----------------------------------------
 
     public function allAction() {
-        $this->assign('all', true)
+        $this->assign('all', Model::exec('blog','getAll'))
             ->display('all.html');
     }
 

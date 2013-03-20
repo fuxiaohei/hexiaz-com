@@ -83,4 +83,18 @@ class blogModel extends Model {
         return $this->db->exec($sql, array('node_id' => $node));
     }
 
+    //------------------
+
+    public function getAll(){
+        $sql = $this->sql('hx_node','node_id,node_title,node_key,create_time,comment_count')
+            ->order('create_time DESC')
+            ->select();
+        $tmp = $this->db->queryAll($sql,null,'blog');
+        $data = array();
+        foreach($tmp as $blog){
+            $data[date('Y.m',$blog->create_time)][] = $blog;
+        }
+        return $data;
+    }
+
 }

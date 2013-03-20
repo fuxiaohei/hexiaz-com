@@ -1,5 +1,14 @@
 <!--include:header.html-->
 <div id="main">
-    <div id="all">all</div>
+    <div id="all"><!--foreach($all as $m=>$blog)-->
+        <div class="blog-month">
+            <span class="blog-month-name">{{$m}}</span>
+            <ul class="blog-month-list"><!--foreach($blog as $b)-->
+                <li><a href="/{{$b->link}}">{{$b->node_title}}</a><span class="blog-comment">({{$b->comment_count
+                    }})</span></li>
+                <!--endforeach-->
+            </ul>
+        </div><!--endforeach-->
+    </div>
 </div>
 <!--include:footer.html-->
