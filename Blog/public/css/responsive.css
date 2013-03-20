@@ -1,0 +1,64 @@
+#nav {
+  float: right;
+}
+#nav li a {
+  margin-left: 1em;
+}
+#sub-nav {
+  width: 100%;
+  text-align: center;
+  margin-top: 12px;
+}
+#content {
+  margin-right: 0;
+}
+#side {
+  position: static;
+  width: 100%;
+  margin-top: 18px;
+  display: none;
+}
+#blog-meta,
+.comment-meta {
+  display: none;
+}
+#blog-main,
+.comment-main {
+  margin-left: 0;
+}
+#comment-list .comment-reply {
+  display: inline;
+}
+#content .blog .blog-desc {
+  padding-left: 0;
+  padding-right: 0;
+}
+@media screen and (max-width: 360px) {
+  #main,
+  #footer {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  #header {
+    padding: 24px 12px 12px 12px;
+  }
+  #logo,
+  #nav,
+  #sub-nav {
+    width: 100%;
+    text-align: center;
+  }
+  #nav {
+    margin-top: 12px;
+  }
+  .blog-create {
+    display: none;
+  }
+  .blog-meta {
+    display: none;
+  }
+  #footer .links,
+  #footer .right {
+    display: none;
+  }
+}
