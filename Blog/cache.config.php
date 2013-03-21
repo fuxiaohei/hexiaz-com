@@ -4,7 +4,7 @@ return array(
     'default' => array(
         'type' => 'file',
         'path' => Hx::$path . 'Runtime/Cache/',
-        'compress' => true,
+        'compress' => false,
         'gc' => false
     )
 );

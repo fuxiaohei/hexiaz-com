@@ -85,16 +85,39 @@ class blogModel extends Model {
 
     //------------------
 
-    public function getAll(){
-        $sql = $this->sql('hx_node','node_id,node_title,node_key,create_time,comment_count')
+    /**
+     * 获取归档博客
+     * @param bool $monthly 按月份分割
+     * @return array
+     */
+    public function getAll($monthly = true) {
+        $sql = $this->sql('hx_node', 'node_id,node_title,node_key,create_time,comment_count')
             ->order('create_time DESC')
             ->select();
-        $tmp = $this->db->queryAll($sql,null,'blog');
-        $data = array();
-        foreach($tmp as $blog){
-            $data[date('Y.m',$blog->create_time)][] = $blog;
+        $tmp = $this->db->queryAll($sql, null, 'blog');
+        if ($monthly) {
+            $data = array();
+            foreach ($tmp as $blog) {
+                $data[date('Y.m', $blog->create_time)][] = $blog;
+            }
+            return $data;
+        } else {
+            return $tmp;
         }
-        return $data;
+    }
+
+    /**
+     * 获取订阅内容
+     * @param int $size 数量
+     * @return array
+     */
+    public function getFeed($size = 10) {
+        $sql = $this->sql('hx_node', 'node_id,node_title,node_key,create_time,node_content,category_name')
+            ->leftJoin('hx_category', 'hx_node.category_id = hx_category.category_id')
+            ->order('node_id DESC')
+            ->limit($size)
+            ->select();
+        return $this->db->queryAll($sql, null, 'blog');
     }
 
 }

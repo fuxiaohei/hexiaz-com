@@ -43,6 +43,7 @@ class indexController extends Controller {
         $category = Model::exec('category', 'getOne', array('category_key', $categorySlug));
         if (!$category) {
             $this->redirect('/e/404.html');
+            return;
         }
         $this->assign('category_current', $category);
         $page = Input::get('page');
@@ -65,6 +66,7 @@ class indexController extends Controller {
         $blog = Model::exec('blog', 'getOne', array('node_key', $slug));
         if (!$blog) {
             $this->redirect('/e/404.html');
+            return;
         }
         $this->assign('blog', $blog)
             ->assign('comments', Model::exec('comment', 'getTree', array($blog->node_id)))
@@ -137,9 +139,38 @@ class indexController extends Controller {
 
     //-----------------------------------------
 
+    /**
+     * 归档页面动作
+     */
     public function allAction() {
-        $this->assign('all', Model::exec('blog','getAll'))
+        $this->assign('all', Model::exec('blog', 'getAll'))
             ->display('all.html');
+    }
+
+    //----------------------------------------
+
+    /**
+     * Feed页面动作
+     */
+    public function feedAction() {
+        if (Router::$format != 'xml') {
+            $this->redirect('/e/404.html');
+            return;
+        }
+        Widget::setCache();
+        Response::make(Widget::exec('feed'),200,'application/rss+xml;charset=UTF-8');
+    }
+
+    /**
+     * 网站地图动作
+     */
+    public function sitemapAction() {
+        if (Router::$format != 'xml') {
+            $this->redirect('/e/404.html');
+            return;
+        }
+        Widget::setCache();
+        Response::make(Widget::exec('sitemap'),200,'application/xml;charset=UTF-8');
     }
 
 
@@ -152,6 +183,7 @@ class indexController extends Controller {
     private function errorPage($code) {
         if ($code == 404) {
             $this->display('404.html');
+            Response::status($code);
             return;
         }
     }
