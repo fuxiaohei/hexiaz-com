@@ -163,10 +163,27 @@ function init_comment_tab() {
 
 }
 
+function init_code_highlight() {
+    var pre = $('.prettyprint');
+    if (pre.length > 0) {
+        pre.addClass('linenums');
+        $("<link>")
+            .attr({ rel: "stylesheet",
+                type: "text/css",
+                href: "/public/css/prettify.css"
+            })
+            .appendTo("head");
+        $.getScript('/public/js/prettify.js',function(){
+            prettyPrint();
+        });
+    }
+}
+
 $(document).ready(function () {
     auto_ie_compatible();
     auto_size();
     init_comment_reply();
     init_comment_event();
     init_comment_tab();
+    init_code_highlight();
 });

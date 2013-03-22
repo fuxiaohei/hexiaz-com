@@ -156,6 +156,11 @@ input.ipt, textarea.ipt {
   .blog-desc {
     line-height: 30px;
     padding: 12px;
+    p {
+      img {
+        width: 99%;
+      }
+    }
   }
   .blog-meta {
     span {
@@ -309,6 +314,28 @@ input.ipt, textarea.ipt {
     line-height: 30px;
     p {
       margin-bottom: 12px;
+      img {
+        width: 99%;
+      }
+    }
+    blockquote {
+      background-color: #F0F0F0;
+      padding: 12px 18px;
+      margin-bottom: 12px;
+      margin-right: 12px;
+      border-left: 6px solid #BBB;
+    }
+    h1 {
+      font-size: 18px;
+    }
+    h2, h3 {
+      font-size: 16px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: bold;
+    }
+    h1, h2, h3 {
+      line-height: 36px;
     }
     margin-bottom: 12px;
     border-bottom: 1px dashed #CCC;
@@ -333,7 +360,7 @@ input.ipt, textarea.ipt {
 
 .comment-wrapper {
   position: relative;
-  margin-bottom:24px;
+  margin-bottom: 24px;
   .comment-title {
     height: 32px;
     padding: 0 16px;
@@ -472,48 +499,47 @@ input.ipt, textarea.ipt {
   }
 }
 
-#comment-new{
+#comment-new {
   margin-bottom: 24px;
   padding: 6px 24px;
   background-color: #feffe9;
-  border:1px solid #AAA;
+  border: 1px solid #AAA;
   display: none;
-  .comment-avatar{
-    left:24px;
-    top:10px
+  .comment-avatar {
+    left: 24px;
+    top: 10px
   }
 }
 
 /* --- all blog page style --- */
 
-.blog-month{
+.blog-month {
   position: relative;
   margin-bottom: 20px;
   padding-bottom: 12px;
   border-bottom: 1px dashed #DDD;
-  .blog-month-name{
+  .blog-month-name {
     font-size: 24px;
     color: #888;
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
   }
-  ul.blog-month-list{
+  ul.blog-month-list {
     margin-left: 120px;
-    li{
+    li {
       margin-bottom: 10px;
     }
-    a{
+    a {
       font-size: 16px;
     }
-    .blog-comment{
+    .blog-comment {
       margin-left: 18px;
       font-size: 14px;
       color: #fd6543;
     }
   }
 }
-
 
 /* --- MS IE compatibility */
 

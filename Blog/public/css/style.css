@@ -151,6 +151,9 @@ textarea.ipt:focus {
   line-height: 30px;
   padding: 12px;
 }
+.blog .blog-desc p img {
+  width: 99%;
+}
 .blog .blog-meta {
   position: relative;
 }
@@ -283,6 +286,36 @@ textarea.ipt:focus {
 }
 .blog-wrapper .blog-content p {
   margin-bottom: 12px;
+}
+.blog-wrapper .blog-content p img {
+  width: 99%;
+}
+.blog-wrapper .blog-content blockquote {
+  background-color: #F0F0F0;
+  padding: 12px 18px;
+  margin-bottom: 12px;
+  margin-right: 12px;
+  border-left: 6px solid #BBB;
+}
+.blog-wrapper .blog-content h1 {
+  font-size: 18px;
+}
+.blog-wrapper .blog-content h2,
+.blog-wrapper .blog-content h3 {
+  font-size: 16px;
+}
+.blog-wrapper .blog-content h1,
+.blog-wrapper .blog-content h2,
+.blog-wrapper .blog-content h3,
+.blog-wrapper .blog-content h4,
+.blog-wrapper .blog-content h5,
+.blog-wrapper .blog-content h6 {
+  font-weight: bold;
+}
+.blog-wrapper .blog-content h1,
+.blog-wrapper .blog-content h2,
+.blog-wrapper .blog-content h3 {
+  line-height: 36px;
 }
 #blog-meta,
 .comment-meta {
