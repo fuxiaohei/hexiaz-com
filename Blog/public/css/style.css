@@ -368,13 +368,31 @@ textarea.ipt:focus {
   color: #fd6543;
   margin-left: 2px;
 }
+.comment-wrapper .comment-page {
+  line-height: 36px;
+  margin-bottom: 12px;
+}
+.comment-wrapper .comment-page .total {
+  margin-right: 8px;
+}
+.comment-wrapper .comment-page a {
+  margin-right: 16px;
+  font-size: 14px;
+  padding: 2px 4px;
+}
+.comment-wrapper .comment-page a:hover {
+  border-bottom: 1px solid #417498;
+}
+.comment-wrapper .comment-page a.current {
+  border-bottom: 1px solid #417498;
+}
 #comment-list {
   margin-bottom: 18px;
 }
 #comment-list > li {
-  margin-bottom: 12px;
-  padding-bottom: 12px;
-  border-bottom: 1px dashed #EEE;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed #DDD;
 }
 .comment-item {
   position: relative;
@@ -407,6 +425,14 @@ textarea.ipt:focus {
 }
 .comment-item .comment-content {
   margin-top: 3px;
+}
+.comment-item .comment-floor {
+  color: #DCDCDC;
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  letter-spacing: 2px;
 }
 .comment-children {
   margin-left: 52px;

@@ -395,14 +395,32 @@ input.ipt, textarea.ipt {
       }
     }
   }
+  .comment-page{
+    line-height: 36px;
+    margin-bottom: 12px;
+    .total{
+      margin-right: 8px;
+    }
+    a{
+      margin-right: 16px;
+      font-size: 14px;
+      padding: 2px 4px;
+      &:hover{
+        border-bottom: 1px solid #417498;
+      }
+    }
+    a.current{
+      border-bottom: 1px solid #417498;
+    }
+  }
 }
 
 #comment-list {
   margin-bottom: 18px;
   >li {
-    margin-bottom: 12px;
-    padding-bottom: 12px;
-    border-bottom: 1px dashed #EEE;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px dashed #DDD;
   }
 }
 
@@ -437,6 +455,14 @@ input.ipt, textarea.ipt {
   }
   .comment-content {
     margin-top: 3px;
+  }
+  .comment-floor{
+    color: #DCDCDC;
+    font-size: 24px;
+    position: absolute;
+    top:0;
+    right: 0;
+    letter-spacing: 2px;
   }
 }
 

@@ -5,7 +5,7 @@
             <div id="blog-meta">
                 <p class="blog-time">{{$blog->create_time_format}}</p>
                 <p class="blog-author">作者： <a href="#">傅小黑</a></p>
-                <p class="blog-category">分类： <a href="/{{$blog->category_link}}">{{$blog->category_name}}</a></p>
+                <p class="blog-category">分类： <a href="/{{$blog->category_link}}" title="查看分类 {{$blog->category_name}}">{{$blog->category_name}}</a></p>
                 <p class="blog-comment">评论： <a class="num" href="#comment-list">{{$blog->comment_count}}</a></p>
                 <p class="blog-view">阅读： <span class="num">{{$blog->view_count}}</span></p>
             </div>
@@ -29,7 +29,7 @@
                     <ul class="comment-children"><!--foreach($comments as $comment)-->
                         <li class="comment-item" id="comment-{{$comment->comment_id}}">
                             <img class="comment-avatar" src="{{$comment->author_avatar}}" alt="{{$comment->author}}"/>
-                            <p class="comment-info"><a class="comment-author" href="{{$comment->author_url}}" target="_blank">{{$comment->author}}</a>
+                            <p class="comment-info"><a class="comment-author" href="{{$comment->author_url}}" target="_blank" title="{{$comment->author}}">{{$comment->author}}</a>
                                 <span class="comment-time">{{$comment->create_time_diff}}</span>
                                 <a class="comment-reply" href="#comment-{{$comment->comment_id}}">回复</a>
                             </p>
@@ -40,12 +40,13 @@
                         </li><!--endforeach-->
                     </ul>
                     <!--{ } }-->
-                    <!--foreach($comments as $comment)-->
-                    <li class="comment-item" id="comment-{{$comment->comment_id}}">
+                    <!--foreach($comments as $k=>$comment)-->
+                    <li class="comment-item comment-top" id="comment-{{$comment->comment_id}}">
                         <img class="comment-avatar" src="{{$comment->author_avatar}}" alt="{{$comment->author}}"/>
-                        <p class="comment-info"><a class="comment-author" href="{{$comment->author_url}}" target="_blank">{{$comment->author}}</a>
+                        <p class="comment-info"><a class="comment-author" href="{{$comment->author_url}}" target="_blank" title="{{$comment->author}}">{{$comment->author}}</a>
                             <span class="comment-time">{{$comment->create_time_diff}}</span>
                             <a class="comment-reply" href="#comment-{{$comment->comment_id}}">回复</a>
+                            <span class="comment-floor">#{{$k+1}}</span>
                         </p>
                         <p class="comment-content">{{$comment->content}}</p>
                         <!--if($comment->children)-->
@@ -66,11 +67,11 @@
                 <form id="comment-form" action="">
                     <div class="comment-form-info">
                         <p class="item"><label for="comment-author">称呼<span class="req">*</span></label>
-                            <input id="comment-author" class="ipt" type="text" name="author" required="required"/></p>
+                            <input id="comment-author" class="ipt" type="text" name="author" required="required" placeholder="输入您的称呼"/></p>
                         <p class="item"><label for="comment-email">邮箱<span class="req">*</span></label>
-                            <input id="comment-email" class="ipt" type="email" name="email" required="required"/></p>
+                            <input id="comment-email" class="ipt" type="email" name="email" required="required" placeholder="输入联系邮箱，不会公开！"/></p>
                         <p class="item"><label for="comment-url">网址</label>
-                            <input id="comment-url" type="url" class="ipt"/></p>
+                            <input id="comment-url" type="url" class="ipt" placeholder="输入联系网址，爱写不写"/></p>
                     </div>
                     <div class="comment-form-content">
                         <textarea name="content" id="comment-content" class="ipt" required="required"></textarea>

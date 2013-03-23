@@ -160,7 +160,41 @@ function init_comment_reply() {
 }
 
 function init_comment_tab() {
-
+    var $list = $('#comment-list');
+    if ($list.length < 1) {
+        return false;
+    }
+    var $cmts = $('.comment-top');
+    var s = 4;
+    if ($cmts.length > s) {
+        var p = parseInt($cmts.length / s);
+        if ($cmts.length % s > 0) {
+            p = p + 1;
+        }
+        var pager = $('<p class="comment-page"></p>');
+        pager.append('<span class="total">共 ' + p + ' 页：</span>');
+        for (var i = 1; i <= p; i++) {
+            var $c = $cmts.slice((i - 1) * s, i * s);
+            $c.addClass('comment-tab-' + i);
+            if (i < p) {
+                pager.append('<a href="#" rel="' + i + '">' + i + '</a>');
+            } else {
+                pager.append('<a href="#" rel="' + i + '" class="current">' + i + '</a>');
+            }
+        }
+        $cmts.hide();
+        $('.comment-tab-' + p).show();
+        $('.comment-main').prepend(pager);
+        pager.on('click', 'a', function (e) {
+            e.preventDefault();
+            $cmts.hide();
+            var index = $(this).attr('rel');
+            $('.comment-tab-' + index).show();
+            $('.comment-page .current').removeClass('current');
+            $(this).addClass('current');
+        });
+    }
+    return true;
 }
 
 function init_code_highlight() {
@@ -173,7 +207,7 @@ function init_code_highlight() {
                 href: "/public/css/prettify.css"
             })
             .appendTo("head");
-        $.getScript('/public/js/prettify.js',function(){
+        $.getScript('/public/js/prettify.js', function () {
             prettyPrint();
         });
     }

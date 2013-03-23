@@ -4,17 +4,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=1"/>
-    <!--if($category_current)-->
-    <title>{{$category_current->category_name}} - 傅小黑.COM{{$page>1?' - 页 '.$page:''}}</title>
-    <!--elseif($blog->node_id)-->
-    <title>{{$blog->node_title}} - 傅小黑.COM</title>
-    <!--elseif($page > 1)-->
-    <title>傅小黑.COM{{$page>1?' - 页 '.$page:''}}</title>
-    <!--elseif($all)-->
+    <?php if($category_current){ ?>
+    <title><?php echo $category_current->category_name ?> - 傅小黑.COM<?php echo $page>1?' - 页 '.$page:'' ?></title>
+    <?php }elseif($blog->node_id){ ?>
+    <title><?php echo $blog->node_title ?> - 傅小黑.COM</title>
+    <?php }elseif($page > 1){ ?>
+    <title>傅小黑.COM<?php echo $page>1?' - 页 '.$page:'' ?></title>
+    <?php }elseif($all){ ?>
     <title>归档 - 傅小黑.COM</title>
-    <!--else-->
+    <?php }else{ ?>
     <title>傅小黑.COM</title>
-    <!--endif-->
+    <?php } ?>
     <link rel="stylesheet" href="/public/css/reset.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="/public/css/style.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="/public/css/responsive.css" type="text/css" media="screen and (max-width:800px)"/>
@@ -34,3 +34,8 @@
         <li><a class="feed" href="/feed.xml" title="订阅文章"></a></li>
     </ul>
 </div>
+<div id="main">
+    <script type="text/javascript" src="http://www.qq.com/404/search_children.js?edition=small" charset="utf-8"></script>
+</div>
+</body>
+</html>

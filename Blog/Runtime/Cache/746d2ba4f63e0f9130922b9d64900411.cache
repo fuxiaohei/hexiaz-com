@@ -1,0 +1,97 @@
+a:2:{s:6:"expire";i:1363890301;s:4:"data";s:18085:"<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>傅小黑.COM</title>
+        <link>http://blog.hexi.com/</link>
+        <description>傅小黑自己的网站</description>
+        <language>zh-CN</language>
+        <pubDate>Thu, 21 Mar 2013 14:25:01 +0800</pubDate>
+        <item>
+            <title>别了，Google Reader</title>
+            <link>http://blog.hexi.com/p/goodbye-google-reader.html</link>
+            <category>数据库技术</category>
+            <description><![CDATA[<p>Google喜欢折腾各种新创意，但是砍起产品来也是大刀阔斧。这不，<a target="_blank" data-no-turbolink="true" href="http://www.36kr.com/p/201881.html">春季大扫除行动</a>又开始了。其中最“著名”的产品是已有8年历史的Google Reader。</p>
+<p>冰冻三尺非一日之寒。Google关闭Google Reader只是系列动作的最后一个步骤。在有了Google+之后，Google Reader就已经被剥离了社会化的内核，并且几乎没有留下什么员工对它进行维护。Google推出的最后一个以<a target="_blank" data-no-turbolink="true" href="http://www.baike.com/wiki/Rss?hf=youdaocitiao&amp;pf=youdaocitiao">RSS</a>为核心的产品是AdSense for Feeds，一个对RSS订阅源进行货币化的广告产品。想对最后的忠实用户，具有浏览洁癖的极客播放广告？这个想法很不好。2012年12月3日，AdSense for Feeds关门大吉。现在Google就只剩下FeedBurner这唯一的一颗RSS种子了。</p>
+<p>别了，Google Reader。对于视之为吸收信息的海绵的极客来说，这多多少少有点依依不舍，但对于一般的互联网用户来说，也许仿佛它就未曾来过。RSS几乎从来就没有赢得过普通互联网用户的青睐，当然，对信息获取如饥似渴的极客而言，RSS简直就是他们的乐园。看到喜欢的网站，找到RSS的链接，然后点击并订阅，正如它的名字Really Simple Syndication一样，同步真的非常简单，不是吗？不是的，要想把它解释给其他人听有点困难。为了尽量让解释通俗易懂，有人曾经这样打过比方：“其实就是把内容变成电视台，你订了哪个台就收看哪个台。”这种努力失败了，作为技术，RSS太宅了，对一般的消费者没有吸引力。</p>
+<p>对于一般人而言，微博这个RSS阅读器更容易接受。三人行必有我师，但凡知识渊博者、乐意分享者，我加关注成为其粉丝，站在巨人的肩膀上岂不看得更高更远？</p>
+<p>与微博相比，RSS阅读器稍欠亲和。而与Flipboard之流相比，RSS阅读器又略逊风骚。是，对于极客来说，信息就够迷人的了，而且只有信息才是迷人的。但对于普罗大众来说，形式很重要，有时候甚至比内涵还重要。冷冰冰地浏览信息流不够性感。</p>
+<p>实际上，很多流行的互联网产品，往往是极客先使用，然后再推广到普通互联网用户那里才流行起来的，比如说Instagram。RSS之所以流行不起来，不得不说是启蒙的失败。</p>
+<p>轻轻地，你走了，就好像从没来过。</p>
+<p>但我会<a target="_blank" data-no-turbolink="true" href="http://www.36kr.com/p/201886.html">带走那片云彩</a>。</p>]]></description>
+            <pubDate>Sat, 25 May 2013 10:36:23 +0800</pubDate>
+            <guid>http://blog.hexi.com/p/?id=6</guid>
+        </item>
+        <item>
+            <title>Strikingly助你轻松打造移动端网页</title>
+            <link>http://blog.hexi.com/p/easy-mobile-page-by-strikingly.html</link>
+            <category>数据库技术</category>
+            <description><![CDATA[<p>随着流量开始从桌面端开始往移动端迁移，给用户提供一款可在几分钟之内创建移动版网页的工具似乎是个不错的主意，而这，正是<a target="_blank" data-no-turbolink="true" href="https://www.strikingly.com/">Strikingly</a>要做的事情。</p>
+<p>Strikingly出自著名的孵化器公司Y Combinator，据<a target="_blank" data-no-turbolink="true" href="http://thenextweb.com/insider/2013/03/14/y-combinator-backed-strikingly-wants-to-help-you-build-a-simple-beautiful-mobile-website/?fromcat=all">TNW</a>消息，在最新的免费版本中，如果你想要创建一个移动端网页，只需在选择模板后，配上图片和文字就行(如下左)。</p>
+<p>目前Strikingly所提供的模板，只适合静态信息，并且其免费版的功能也很有限，只能创办一个网页且不能自定义域名，每月也只有500兆带宽。</p>
+<p>在最近刚推出的付费版中(上图右)，功能则会更多，用户不仅可以添加电话、文字描述、以及电子邮件等信息，网页域名也可自定义，每月带宽也更多。</p>
+<p>利用Strikingly创办网页的确很快，但在试用过免费版本之后，并没有让人眼前一亮的地方。的确，页面在手机上的效果很好，但如果你已经是<a target="_blank" data-no-turbolink="true" href="http://about.me">About.me</a>或<a target="_blank" data-no-turbolink="true" href="http://WordPress.com">WordPress.com</a>的用户，你是没有十足的动力去换到Strikingly平台上的。</p>]]></description>
+            <pubDate>Sat, 20 Apr 2013 17:14:37 +0800</pubDate>
+            <guid>http://blog.hexi.com/p/?id=5</guid>
+        </item>
+        <item>
+            <title>我们要做一个阅读器，你们想要啥样的？</title>
+            <link>http://blog.hexi.com/p/what-is-a-rss-reader.html</link>
+            <category>随吐槽</category>
+            <description><![CDATA[<p>曾经的第一家社交媒体Digg自贱卖后就一直没什么消息，今年一月份不疼不痒的说过一番“Digg效应又回来了”，说是五个月里用户基数已经翻倍。这次Google Reader关闭，不少阅读器纷纷表示欢迎被Google抛弃的用户，支持导入Google Reader的订阅源迁移导入。Digg也没落下，只是它想做的，可能不止一个阅读器。</p>
+<p>Digg在官方博客上称，他们本打算在今年下半年做一个阅读器，能够像曾经的Digg一样让互联网上的内容更易获取和消化。现在Google Reader提前跪了，于是这项计划现在成了Digg的第一要务。“从今天开始，我们要做一个阅读器。”</p>
+<p>Digg自2010年收购尚处于Beta阶段的News.me开始，就希望做一个能将互联网上有趣的东西实时筛选出来的产品，这也是重做Digg时遵循的理念之一。现在要做的阅读器也会遵循这一准则，将重建Google Reader最好的那部分功能（包括API），还会针对如今的互联网环境做一些新的优化，可能的方向是利用现在活跃的社区或者网络（比如Facebook、Hacker News或者Tumblr），将社交和阅读结合的更紧密一些。</p>
+<p>最后Digg还向大家发出了求助的呼声：“我们需要知道你想要什么样的阅读器，它应该帮你解决什么问题？什么功能有用什么对你没用？你希望加入哪些现在还没有的功能？”</p>
+<p>在这之前，各位可以参考下这篇文章：<a target="_blank" data-no-turbolink="true" href="http://www.36kr.com/p/201886.html">如何使用 Google Reader API 导出全部加星收藏和博客文章备份</a></p>]]></description>
+            <pubDate>Sat, 16 Mar 2013 23:51:23 +0800</pubDate>
+            <guid>http://blog.hexi.com/p/?id=4</guid>
+        </item>
+        <item>
+            <title>微信会员卡收费，贵了还是早了？</title>
+            <link>http://blog.hexi.com/p/weixin-vip.html</link>
+            <category>数据库技术</category>
+            <description><![CDATA[<p>导语：依托于微信的微生活会员卡或已开始试收费，目标锁定商家用户，推出按时间和按用户数两种收费模式。微信O2O闭环初露端倪，收费时机已经到来？</p>
+<p>农历蛇年春节过后，腾讯电商旗下的微生活品牌(life.qq.com)陆续更换了新的标识，这意味着对原有“QQ美食”品牌整合和换代完成，新的微生活品牌实现了微信+APP群+ PC端的信息流闭环。微生活会员卡作为最早和唯一与微信进行平台级合作的O2O产品，早在去年12月，就有消息称在今年年初会尝试收费，但当时得到了腾讯生活电商公关部的否认。现在看来，经过半年的蓄客，终于开始悄然开始微生活会员卡收费的试水。笔者最近接到了多个商户管理层的咨询，“微信会员卡值不值得购买？”那么，微生活会员卡究竟在卖什么，又是怎么卖的呢？</p>
+<p><strong>卖产品还是卖服务？</strong></p>
+<p>目前微生活会员卡的收费模式有两种：A模式为按月/季度/年包段收费，B模式为根据开卡会员数量的CPA方式收费，二者的门槛费都在五位数以上，但暂无针对商户规模的差别化服务包。这笔钱到底值不值得掏，还是要看商户的需求是什么，而微生活卖的又是什么。</p>
+<p>微生活会员卡收费虽然不等于微信收费（二者不是一个团队甚至不是一个公司，前者是腾讯电商控股公司，后者是腾讯广州研究院），但作为唯一与微信深度绑定的插件类应用，其地位目前仍是空前绝后的，绝大多数用户都会自然将其作为微信功能的一部分。从去年九月起，微生活部署在各个城市的运营团队不遗余力，不惜成本的推广商户免费使用会员卡系统，并取得了不错的战绩和整个市场的关注。然而，微生活团队在推广会员卡系统时，并没有向广大商户用户开放其会员系统后台，特别是很多中小商户甚至没有见过后台的模样，他们每一条通过微信push的消息，都是由本地运营团队代为发送的，自然他们也没有得到详细的微信用户资料。</p>
+<p>然而，这一切随着两个事实而改变：第一，类似会员卡的微信会员系统非常易于开发，难度实际在于想清楚微信的运营思路，去年十二月，就已经有为数不少的互联网营销公司推出了基于微信api开发的简易crm系统。第二，微信公众平台的推出再次彻底颠覆了游戏规则，任何一个公众微信账号都可以自由地对听众进行分类筛选，事实上，即便是只基于公众平台，商户已经能完成除手机支付以外的其他诉求。</p>
+<p>在这种情况下，微生活会员卡只有加速其商业化进程，才能再次走在O2O实验的最前列。我们来看两种收费模式，按时间收费的实质是售卖会员卡系统，当然这个系统要比公众平台更加高级，可以对用户进行精细化分析；按会员数收费则是典型的CPA收费模式，而这正是微生活会员卡的领头人戴志康最擅长的领域。</p>
+<p><strong>为何敢于开始收费尝试？</strong></p>
+<p>第一，源于戴志康的个人魄力。早在微信初期，戴志康便看到了微信模式蕴含的巨大O2O商机，带领康盛团队开发了基于微信api的会员卡系统，其实质就是基于微信用户的CRM系统。微信团队后来面对来自腾讯内部纷至沓来的各种需求，随即关闭了大门，潜心打造微信本身，会员卡幸运地搭上了末班车，与腾讯新闻，朋友圈成为了微信平台上的三大插件。 此时戴愿意再做一次第一个吃螃蟹的人不足为奇。</p>
+<p>第二，源于微生活会员卡已经积累了大量渠道资源和成功案例。微生活团队在深圳，广州，北京，上海，成都等主要城市都设置了数十人的拓展团队，进行本地落地运营，拓展商户资源上千家，个别指标已经可以和大众点评网相抗衡，而后者却没有微信这样的利器。一时间微信二维码在全国各地都成为了户外广告和店内水牌的不二主角。去年微信运营的著名案例，除了自运营的之外，几乎都出自微生活团队。</p>
+<p>第三，或许是最重要的一点：微生活会员卡打通了与财付通的支付环节，用户可以对会员卡充值储值，从而实现了微信支付的功能。O2O交易闭环的最后一步：消费效果监控终于得以实现。虽然充值和直接消费并不完全一致，财付通的体验也非常＂呵呵＂，但无疑有了实质性的进步。</p>
+<p><strong>客户的真实需求</strong></p>
+<p>使用微信的商户有两种，一种是对互联网产品有心理预期，愿意尝鲜的群体，我的一位开量贩的朋友就属此类，他认为微信直接显示一张虚拟卡片显得很酷。另一种是对新产品效果有预期的人，他不关心到底是微信还是微博，有效果才是王道。而目前的微信会员卡在现实层面会有两大阻力：</p>
+<ol>
+<li><p>会影响现在的财务流程。微生活会员卡的预充值功能意味着商家本来可以直接收的费要在微生活过一道手，由此带来的问题将会很多，回款时间，垫资，现金压力，门店与公司的结算方式，与微生活的结算方式等等。商户们在经历了团购大战，习惯了将同等优惠给到多个互联网商之后，这种形式是否能够接受？</p></li>
+<li><p>微生活会员卡其实质是一个crm系统，很多大中商户自有会员卡体制与微生活会员卡无法兼容，谁都更愿意将核心资源握在自己手中。海量的中小商户倒是需要这个系统进行用户沉淀，然而五位数的使用费可不是小数目，既然如此又为何不用免费的公众平台系统呢？</p></li>
+</ol>
+<p><strong>结语</strong></p>
+<p>微生活会员卡收费是否成功，能否成为O2O模式的标杆，关键仍在于它是否能满足商户的需求，能否为普通用户带来实惠。面对餐饮，旅游，快消，演艺等O2O主力行业，除了杀手级功能和精准的效果监控之外，面对林林总总，参差不齐的大小商户，灵活多变，可供选择的收费服务包也是其成功的决定性因素。</p>]]></description>
+            <pubDate>Sat, 16 Mar 2013 23:49:46 +0800</pubDate>
+            <guid>http://blog.hexi.com/p/?id=3</guid>
+        </item>
+        <item>
+            <title>豆果美食WP8版正式上线</title>
+            <link>http://blog.hexi.com/p/douguo-food-in-wp8.html</link>
+            <category>数据库技术</category>
+            <description><![CDATA[<p>近日，国内最大的美食社区<a target="_blank" data-no-turbolink="true" href="http://www.douguo.com/">豆果网</a>宣布其旗下主打的菜谱社区应用豆果美食（<a target="_blank" data-no-turbolink="true" href="http://www.windowsphone.com/en-hk/store/app/%E8%B1%86%E6%9E%9C%E7%BE%8E%E9%A3%9F/d0d589ce-709d-4dd3-8c47-cfde6d47b224">WP8版下载</a>）正式登陆WP8平台。这也使得豆果美食成了目前唯一一款覆盖iOS、Android、WP8、windows 8四大平台的菜谱社区应用。</p>
+<p>WP8版的豆果美食除了采用WP8特有的UI设计外，还增添了语音操控、菜谱朗读功能。用户不仅可以用语音控制来进行在豆果上的操作，还能让应用将菜谱朗读出来。豆果表示，这样做的目的是希望用户能解放双手，更加方便地在厨房拿豆果菜谱学做菜。</p>
+<p>去年9月，我们曾报道过<a target="_blank" data-no-turbolink="true" href="http://www.36kr.com/p/154528.html" title="豆果美食新版iOS应用上线，想由工具变社">豆果美食的iOS改版</a>。当时的豆果已经不满足只是一个平凡的学做菜工具，开始慢慢探索成长为一个更具用户黏性的菜谱社区。现在，从其WP8版语音功能的添加来看，豆果还是没有停止其优化工具的脚步。</p>]]></description>
+            <pubDate>Sat, 16 Mar 2013 23:47:34 +0800</pubDate>
+            <guid>http://blog.hexi.com/p/?id=2</guid>
+        </item>
+        <item>
+            <title>传腾讯无线事业部将被拆分</title>
+            <link>http://blog.hexi.com/p/seperate-qq-wireless.html</link>
+            <category>前端开发</category>
+            <description><![CDATA[<p><a target="_blank" data-no-turbolink="true" href="http://weibo.com/alibuybuy">@互联网的那点事</a>刚刚在微博上爆料称，“腾讯无线事业部将被拆分，QQ通讯录团队也散了，并入微信团队。”</p>
+<p>腾讯在5月份曾经进行过<a target="_blank" data-no-turbolink="true" href="http://www.36kr.com/p/110240.html">组织架构调整</a>，将之前的业务重新划分成企业发展事业群 CDG、互动娱乐事业群 IEG、移动互联网事业群 MIG、网络媒体事业群 OMG、社交网络事业群 SNG。并且增加新的技术工程事业群 TEG 和腾讯电商控股公司 ECC。</p>
+<p>在去年底的时候，腾讯再次<a target="_blank" data-no-turbolink="true" href="http://www.36kr.com/p/200439.html">调整移动互联网事业群</a>，将各个事业群的移动业务从 MIG 剥离出来，重新划分回原有的事业群。例如手机 QQ 和手机 Qzone 重新归入社交网络事业群 (SNG)，手机腾讯网和微博移动客户端归入在线媒体事业群 (OMG)。调整过后，MIG将只剩下手机管家，手机浏览器，应用宝，移动阅读等“弱势业务”。</p>
+<p>之前的两次调整，腾讯已经完全确定了“移动为先”的策略，而这个“先”则指的是以微信为先，而非手机QQ。虽然马化腾此前明确表示QQ和微信分属不同的职责，有相互学习的地方，但显然腾讯内部已经将微信视为战略重心。目前整个腾讯的移动业务都围绕微信在展开，将QQ通讯录并入微信团队更加证明腾讯内部对微信的资源倾斜。相信日后还有会更多的部门，将配合微信做出“牺牲”。</p>]]></description>
+            <pubDate>Mon, 18 Feb 2013 08:46:34 +0800</pubDate>
+            <guid>http://blog.hexi.com/p/?id=1</guid>
+        </item>
+    </channel>
+</rss>
+";}
