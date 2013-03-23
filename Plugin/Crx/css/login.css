@@ -1,0 +1,61 @@
+html,
+body,
+input,
+textarea,
+section,
+option {
+  font-family: "Ubuntu", "Consolas", "Microsoft YaHei", "Verdana", sans-serif;
+  font-size: 14px;
+  color: #444;
+}
+html,
+body {
+  background-color: #F6F6F6;
+  line-height: 24px;
+}
+a {
+  color: #5092BD;
+  text-decoration: none;
+}
+a:hover {
+  color: #417498;
+}
+#logo {
+  font-size: 21px;
+  text-align: center;
+  margin: 40px auto;
+}
+#login-form {
+  padding: 0 18px;
+}
+#login-form .item {
+  margin-bottom: 21px;
+  text-align: center;
+}
+#login-form .ipt {
+  padding: 6px 8px;
+  border: 1px solid #BBB;
+  width: 226px;
+  outline: none;
+}
+#login-form .submit {
+  text-align: right;
+}
+#login-form .submit .left {
+  line-height: 32px;
+  font-size: 13px;
+  color: #a92b2b;
+  font-weight: bold;
+}
+#login-form .btn {
+  height: 32px;
+  width: 100px;
+  border: none;
+  background-color: #5092BD;
+  color: #FFF;
+  line-height: 32px;
+}
+#login-form .btn:hover {
+  background-color: #417498;
+  cursor: pointer;
+}

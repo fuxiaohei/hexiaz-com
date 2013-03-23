@@ -1,0 +1,26 @@
+{
+    "name": "傅小黑.COM - Crx",
+    "description": "傅小黑.COM Chrome辅助插件",
+    "version": "0.1.0",
+    "manifest_version": 2,
+    "permissions": [
+        "tabs",
+        "storage",
+        "http://*/*"
+    ],
+    "background": {
+        "page": "background.html"
+    },
+    "icons": {
+        "16": "img/icon/icon_16.png",
+        "24": "img/icon/icon_24.png",
+        "48": "img/icon/icon_48.png",
+        "96": "img/icon/icon_96.png",
+        "128": "img/icon/icon_128.png",
+        "256": "img/icon/icon_256.png",
+        "512": "img/icon/icon_512.png"
+    },
+    "browser_action":{
+        "default_icon":"img/icon/icon_24.png"
+    }
+}
