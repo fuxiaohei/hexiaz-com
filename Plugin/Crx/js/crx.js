@@ -11,6 +11,7 @@ var crx = (function () {
             } else {
                 this.setWindow();
             }
+            localStorage.setItem('user', JSON.stringify({'user': '傅小黑'}));
         },
         setPopup: function () {
             chrome.browserAction.setPopup({
@@ -52,10 +53,6 @@ var crx = (function () {
     return {
         run: function () {
             ext.listenResponse();
-            ext.regResponse('user-login', function (arg) {
-                console.log(arg);
-                return {'token': '66666'};
-            });
             initAction.act();
         },
         get: function (name) {

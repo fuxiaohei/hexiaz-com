@@ -1,0 +1,89 @@
+html,
+body,
+input,
+textarea,
+section,
+option {
+  font-family: "Ubuntu", "Consolas", "Microsoft YaHei", "Verdana", sans-serif;
+  font-size: 13px;
+  color: #444;
+}
+html,
+body {
+  background-color: #FFF;
+  line-height: 24px;
+  width: 300px;
+}
+a {
+  color: #5092BD;
+  text-decoration: none;
+}
+a:hover {
+  color: #417498;
+}
+#user {
+  padding: 9px 12px;
+  background-color: #F6F6F6;
+}
+#user .avatar {
+  width: 50px;
+  height: 50px;
+  padding: 2px;
+  background-color: #FFF;
+}
+#user .avatar:hover {
+  background-color: #68c0f2;
+}
+#user .email {
+  color: #999;
+  padding-left: 66px;
+}
+#user .rest-time {
+  color: #999;
+}
+#user .name {
+  font-size: 16px;
+  padding-left: 66px;
+  margin-bottom: 4px;
+}
+#update {
+  padding: 24px 12px 30px 12px;
+  border-top: 1px solid #BBB;
+  text-align: center;
+}
+#update a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border: 1px solid #CCC;
+  margin: 0 8px;
+  position: relative;
+}
+#update a img {
+  width: 32px;
+  height: 32px;
+  margin-top: 9px;
+}
+#update a .num {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #ff6c54;
+  top: -6px;
+  right: -6px;
+}
+#update a:hover {
+  background-color: #F6F6F6;
+  border-color: #BBB;
+}
+.tooltip {
+  padding: 0px 6px;
+  border: 1px solid #CDCDCD;
+  background-color: #ffffe0;
+  font-size: 12px;
+}
