@@ -5,6 +5,10 @@ var ext = (function () {
     return {
         sendRequest: function (name, data, result) {
             data._extName = name;
+            if (!result) {
+                result = function () {
+                };
+            }
             chrome.extension.sendRequest(data, result);
         },
         listenResponse: function () {
